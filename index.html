@@ -3,283 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Productivity Hacks That Actually Work in 2026</title>
-    <meta name="description" content="Science-backed productivity tips to get more done in less time. Master your time with proven strategies used by top performers.">
-    <meta property="og:title" content="10 Productivity Hacks That Actually Work">
-    <meta property="og:description" content="Master your time with science-backed strategies">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Productivity Masterclass - 10 Science-Backed Hacks</title>
+    <meta name="description" content="Transform your productivity with science-backed strategies. Used by 10M+ professionals worldwide.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --card-bg: #ffffff;
-        }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary:#6366f1;--primary-dark:#4f46e5;--bg:#0f0f1a;--card:#1a1a2e;--text:#ffffff;--text-muted:#94a3b8;--accent:#22d3ee;--gradient:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#d946ef 100%)}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 24px}
         
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-            background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
-        }
-        .hero-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        /* Animated Background */
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;width:600px;height:600px;background:var(--gradient);filter:blur(120px);opacity:0.3;top:-200px;right:-200px;border-radius:50%;animation:float 8s ease-in-out infinite}
+        .hero::after{content:'';position:absolute;width:400px;height:400px;background:linear-gradient(135deg,#22d3ee,#6366f1);filter:blur(100px);opacity:0.2;bottom:-100px;left:-100px;border-radius:50%;animation:float 6s ease-in-out infinite reverse}
+        @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,30px)}}
         
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            padding: 50px 0;
-            flex-wrap: wrap;
-        }
-        .stat { text-align: center; }
-        .stat-number { font-size: 3rem; font-weight: 800; color: var(--primary); }
-        .stat-label { font-size: 0.95rem; color: var(--text-light); margin-top: 4px; }
+        .hero-content{position:relative;z-index:1;text-align:center;padding:80px 0}
+        .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.3);padding:10px 20px;border-radius:50px;font-size:0.9rem;font-weight:600;margin-bottom:32px;backdrop-filter:blur(10px)}
+        .badge-dot{width:8px;height:8px;background:#22d3ee;border-radius:50%;animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
         
-        .content { padding: 40px 0 80px; }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:900;line-height:1.05;margin-bottom:24px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero p{font-size:1.4rem;color:var(--text-muted);max-width:600px;margin:0 auto 40px}
         
-        .tip-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            border: 1px solid rgba(0,0,0,0.04);
-            display: flex;
-            gap: 24px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .tip-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-        }
-        .tip-number {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 800;
-            flex-shrink: 0;
-        }
-        .tip-content h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .tip-content p {
-            color: var(--text-light);
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-        .tip-tag {
-            display: inline-block;
-            background: #eef2ff;
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 12px;
-        }
+        .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+        .btn{padding:18px 36px;border-radius:12px;font-weight:700;font-size:1.1rem;text-decoration:none;transition:all 0.3s ease;display:inline-flex;align-items:center;gap:10px}
+        .btn-primary{background:var(--gradient);color:white;box-shadow:0 4px 30px rgba(99,102,241,0.4)}
+        .btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(99,102,241,0.5)}
+        .btn-secondary{background:rgba(255,255,255,0.05);color:white;border:1px solid rgba(255,255,255,0.1)}
+        .btn-secondary:hover{background:rgba(255,255,255,0.1)}
         
-        .cta-section {
-            padding: 80px 40px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border-radius: 24px;
-            margin: 60px 0;
-        }
-        .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
-        .cta-section p { opacity: 0.9; margin-bottom: 32px; font-size: 1.15rem; }
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: var(--primary);
-            padding: 18px 36px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-        }
-        .cta-button:hover { transform: scale(1.05); }
+        /* Stats */
+        .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;padding:80px 0;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05)}
+        .stat{text-align:center}
+        .stat-value{font-size:3.5rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .stat-label{color:var(--text-muted);margin-top:8px;font-size:1rem}
         
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a { color: var(--primary); text-decoration: none; }
+        /* Section */
+        section{padding:100px 0}
+        .section-header{text-align:center;margin-bottom:64px}
+        .section-header h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px}
+        .section-header p{color:var(--text-muted);font-size:1.2rem;max-width:600px;margin:0 auto}
         
-        @media (max-width: 640px) {
-            .tip-card { flex-direction: column; gap: 16px; }
-            .tip-number { width: 48px; height: 48px; font-size: 1.2rem; }
-            .stats { gap: 40px; }
+        /* Cards Grid */
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:24px}
+        .card{background:var(--card);border-radius:24px;padding:40px;border:1px solid rgba(255,255,255,0.05);transition:all 0.4s ease;position:relative;overflow:hidden}
+        .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient);opacity:0;transition:opacity 0.3s}
+        .card:hover{transform:translateY(-8px);border-color:rgba(99,102,241,0.3)}
+        .card:hover::before{opacity:1}
+        
+        .card-number{width:64px;height:64px;background:rgba(99,102,241,0.15);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:var(--primary);margin-bottom:24px}
+        .card h3{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+        .card p{color:var(--text-muted);font-size:1rem;line-height:1.7}
+        .card-tag{display:inline-block;background:rgba(34,211,238,0.15);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:0.85rem;font-weight:600;margin-top:20px}
+        
+        /* CTA Section */
+        .cta-section{background:var(--card);border-radius:32px;padding:80px 40px;text-align:center;position:relative;overflow:hidden;margin:60px 0}
+        .cta-section::before{content:'';position:absolute;inset:0;background:var(--gradient);opacity:0.1}
+        .cta-section h2{font-size:2.5rem;font-weight:800;margin-bottom:16px;position:relative}
+        .cta-section p{color:var(--text-muted);margin-bottom:32px;font-size:1.2rem;position:relative}
+        
+        /* Footer */
+        footer{padding:40px 0;text-align:center;color:var(--text-muted);border-top:1px solid rgba(255,255,255,0.05)}
+        footer a{color:var(--accent);text-decoration:none}
+        
+        @media(max-width:768px){
+            .hero-content{padding:60px 0}
+            h1{font-size:2.5rem}
+            .cards{grid-template-columns:1fr}
+            .cta-section{padding:60px 24px}
         }
     </style>
 </head>
 <body>
     <section class="hero">
         <div class="container">
-            <span class="hero-badge">⚡ 2026 Edition</span>
-            <h1>10 Productivity Hacks<br>That Actually Work</h1>
-            <p>Science-backed strategies to get more done in less time. Used by top performers worldwide.</p>
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    2026 Edition • Science-Backed
+                </div>
+                <h1>Master Your<br>Productivity</h1>
+                <p>10 proven strategies used by elite performers to accomplish more in less time. Transform how you work.</p>
+                <div class="cta-group">
+                    <a href="#tips" class="btn btn-primary">
+                        Start Learning →
+                    </a>
+                    <a href="https://t.me/vvonha" class="btn btn-secondary">
+                        📢 Join Community
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     
-    <section class="stats">
-        <div class="stat">
-            <div class="stat-number">40%</div>
-            <div class="stat-label">Average efficiency gain</div>
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">40%</div>
+                <div class="stat-label">Average efficiency gain</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">2.5x</div>
+                <div class="stat-label">More focused hours</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">10M+</div>
+                <div class="stat-label">People transformed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Studies referenced</div>
+            </div>
         </div>
-        <div class="stat">
-            <div class="stat-number">2.5x</div>
-            <div class="stat-label">More focused hours</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">10M+</div>
-            <div class="stat-label">People using these tips</div>
-        </div>
-    </section>
+    </div>
     
-    <section class="content">
+    <section id="tips">
         <div class="container">
-            <h2 class="section-title">The Productivity Playbook</h2>
+            <div class="section-header">
+                <h2>The Productivity Playbook</h2>
+                <p>Each technique is backed by cognitive science research and tested by millions.</p>
+            </div>
             
-            <div class="tip-card">
-                <div class="tip-number">1</div>
-                <div class="tip-content">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-number">01</div>
                     <h3>The 2-Minute Rule</h3>
-                    <p>If a task takes less than 2 minutes, do it immediately. Don't add it to your list. Small tasks pile up and create mental clutter — clearing them instantly frees your brain for bigger work.</p>
-                    <span class="tip-tag">Quick Win</span>
+                    <p>If a task takes less than 2 minutes, do it immediately. Small tasks create mental clutter — clearing them frees cognitive resources for deep work.</p>
+                    <span class="card-tag">⚡ Quick Win</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">2</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">02</div>
                     <h3>Time Blocking</h3>
-                    <p>Schedule specific blocks of time for specific tasks. Protect these blocks like meetings. Example: 9-11 AM deep work, 11-12 emails, 1-3 PM meetings, 3-5 PM creative tasks.</p>
-                    <span class="tip-tag">High Impact</span>
+                    <p>Schedule specific blocks for specific tasks. Protect them like meetings. Your calendar isn't just for meetings — it's for your most important work.</p>
+                    <span class="card-tag">📅 High Impact</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">3</div>
-                <div class="tip-content">
-                    <h3>The Pomodoro Technique</h3>
-                    <p>Work for 25 minutes, then take a 5-minute break. After 4 cycles, take a longer 15-30 minute break. The ticking timer creates urgency and prevents burnout.</p>
-                    <span class="tip-tag">Focus</span>
+                
+                <div class="card">
+                    <div class="card-number">03</div>
+                    <h3>Pomodoro Technique</h3>
+                    <p>25 minutes focused work, 5-minute break. After 4 cycles, take 15-30 minutes. The constraint creates urgency and prevents burnout.</p>
+                    <span class="card-tag">🎯 Focus</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">4</div>
-                <div class="tip-content">
-                    <h3>Eat the Frog First</h3>
-                    <p>Do your hardest, most important task first thing in the morning when your willpower is highest. "If it's your job to eat a frog, it's best to do it first thing in the morning." — Mark Twain</p>
-                    <span class="tip-tag">Mindset</span>
+                
+                <div class="card">
+                    <div class="card-number">04</div>
+                    <h3>Eat the Frog</h3>
+                    <p>Do your hardest task first when willpower peaks. "If it's your job to eat a frog, do it first thing in the morning." — Mark Twain</p>
+                    <span class="card-tag">🧠 Mindset</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">5</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">05</div>
                     <h3>The 80/20 Rule</h3>
-                    <p>80% of results come from 20% of efforts. Identify your high-impact activities and prioritize them ruthlessly. Ask: Which 20% of my tasks produce 80% of my results?</p>
-                    <span class="tip-tag">Strategy</span>
+                    <p>80% of results come from 20% of efforts. Identify high-impact activities ruthlessly. Ask: Which 20% produces 80% of my results?</p>
+                    <span class="card-tag">📊 Strategy</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">6</div>
-                <div class="tip-content">
-                    <h3>Batch Similar Tasks</h3>
-                    <p>Group similar tasks together. Check emails at set times instead of constantly. Make all calls in one block. Context switching costs 23 minutes of refocus time — batching eliminates this.</p>
-                    <span class="tip-tag">Efficiency</span>
+                
+                <div class="card">
+                    <div class="card-number">06</div>
+                    <h3>Batch Processing</h3>
+                    <p>Group similar tasks together. Context switching costs 23 minutes of refocus time. Batching eliminates this cognitive tax entirely.</p>
+                    <span class="card-tag">⚙️ Efficiency</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">7</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">07</div>
                     <h3>Single-Tasking</h3>
-                    <p>Multitasking is a myth. Focus on ONE thing at a time. Close all unnecessary tabs and apps. Your brain can't truly parallel process — it just switches rapidly and poorly.</p>
-                    <span class="tip-tag">Focus</span>
+                    <p>Multitasking is a myth. Your brain doesn't parallel process — it switches rapidly and poorly. One thing at a time. Always.</p>
+                    <span class="card-tag">🎯 Focus</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">8</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">08</div>
                     <h3>The 5-Second Rule</h3>
-                    <p>When you have an impulse to act on a goal, count 5-4-3-2-1 and physically move. Don't give your brain time to talk you out of it. Action beats overthinking.</p>
-                    <span class="tip-tag">Mindset</span>
+                    <p>Impulse to act? Count 5-4-3-2-1 and move. Don't let your brain talk you out of it. Action beats overthinking every time.</p>
+                    <span class="card-tag">🧠 Mindset</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">9</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">09</div>
                     <h3>Weekly Review</h3>
-                    <p>Every Sunday, spend 30 minutes reviewing your week and planning the next one. What worked? What didn't? What will you do differently? Reflection accelerates growth.</p>
-                    <span class="tip-tag">System</span>
+                    <p>30 minutes every Sunday. What worked? What didn't? What changes? Reflection without action is useless. Action without reflection is blind.</p>
+                    <span class="card-tag">🔄 System</span>
                 </div>
-            </div>
-            
-            <div class="tip-card">
-                <div class="tip-number">10</div>
-                <div class="tip-content">
+                
+                <div class="card">
+                    <div class="card-number">10</div>
                     <h3>Protect Your Sleep</h3>
-                    <p>7-8 hours of sleep is non-negotiable. Sleep deprivation destroys productivity more than any hack can fix. 6 hours = 25% reduced cognitive function. You're not saving time — you're wasting it.</p>
-                    <span class="tip-tag">Foundation</span>
+                    <p>7-8 hours is non-negotiable. 6 hours = 25% reduced cognition. You're not saving time — you're destroying tomorrow's productivity.</p>
+                    <span class="card-tag">💤 Foundation</span>
                 </div>
             </div>
             
             <div class="cta-section">
-                <h2>Want More Productivity Tips?</h2>
-                <p>Join our Telegram channel for weekly insights and strategies.</p>
-                <a href="https://t.me/vvonha" class="cta-button">
+                <h2>Ready to Transform?</h2>
+                <p>Join thousands getting weekly productivity insights, tools, and strategies.</p>
+                <a href="https://t.me/vvonha" class="btn btn-primary">
                     📢 Join Free Channel
                 </a>
             </div>
@@ -288,7 +209,7 @@
     
     <footer>
         <div class="container">
-            <p>© 2026 <a href="https://t.me/vvonha">@vvonha</a> · More guides at vvonha.github.io</p>
+            <p>© 2026 <a href="https://t.me/vvonha">@vvonha</a> • More guides at vvonha.github.io</p>
         </div>
     </footer>
 </body>
